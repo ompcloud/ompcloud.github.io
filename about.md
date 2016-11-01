@@ -7,6 +7,7 @@ permalink: /about/
 OmpCloud is a research project conducted at the University of Campinas ([IC-UNICAMP](http://ic.unicamp.br/)) in Brazil.
 
 People involved in the OmpCloud project are:
+
   - [Hervé Yviquel](http://people.irisa.fr/Herve.Yviquel/) (Postdoc researcher)
   - [Guido Araújo](https://guidoaraujo.wordpress.com/) (Professor)
 

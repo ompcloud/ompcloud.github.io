@@ -4,7 +4,7 @@ title: OmpCloud
 permalink: /
 ---
 
-
+OmpCloud is a toolset that allows to use the cloud as an OpenMP offloading device.
 
 ## Get Started
 
@@ -24,7 +24,7 @@ docker exec -i -t ompcloud-test /bin/bash
 Finally, our benchmark test can be executed by running the following scripts within the container:
 
 ```
-/opt/scripts/ompcloud_toolsupdate.sh
+/opt/scripts/ompcloud_updatetools.sh
 /opt/scripts/ompcloud_quicktests.sh
 ```
 
