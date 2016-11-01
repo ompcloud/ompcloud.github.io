@@ -25,7 +25,7 @@ Finally, our benchmark test can be executed by running the following scripts wit
 
 ```
 $CLOUD_CONF_DIR/ompcloud-updatetools.sh
-$CLOUD_CONF_DIR/ompcloud_quicktests.sh
+$CLOUD_CONF_DIR/ompcloud-quicktests.sh
 ```
 
 Our test are run locally within the container using Spark and HDFS servers that was already setup. To see the current configuration of our cloud offloading runtime, run the command:
