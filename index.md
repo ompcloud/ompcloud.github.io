@@ -44,16 +44,16 @@ docker exec -i -t ompcloud-test /bin/bash
 Finally, our benchmark test can be executed by running the following scripts inside the container shell:
 
 ```
-$CLOUD_CONF_DIR/ompcloud-quicktests.sh
+$OMPCLOUD_CONF_DIR/ompcloud-quicktests.sh
 ```
 
 Our test are run locally within the container using Spark and HDFS servers that was already setup. To see the current configuration of our cloud offloading runtime, run the command:
 
 ```
-cat $CLOUD_CONF_PATH
+cat $OMPCLOUD_CONF_PATH
 ```
 
-In fact, the environment variable `$CLOUD_CONF_PATH` defines the path of the configuration file to use when offloading the computation. This way, you can easily switch from one configuration to another by changing its value.
+In fact, the environment variable `$OMPCLOUD_CONF_PATH` defines the path of the configuration file to use when offloading the computation. This way, you can easily switch from one configuration to another by changing its value.
 
 ## Advanced Usage
 
@@ -74,7 +74,7 @@ If you want to run an application on AWS, you need to setup your cluster. The cl
 Our toolset is still very experimental, so it is probably a good idea to update it regularly. Update and recompilation within your container can be easily performed by running the following script:
 
 ```
-$CLOUD_CONF_DIR/ompcloud-updatetools.sh
+$OMPCLOUD_SCRIPT_DIR/ompcloud-updatetools.sh
 ```
 
 Another way is to update the docker image from the host using:
