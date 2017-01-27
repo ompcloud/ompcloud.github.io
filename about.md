@@ -18,4 +18,4 @@ The experiments are also supported by the AWS Cloud Credits for Research program
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[contact@ompcloud.org](mailto:contact@ompcloud.org)
