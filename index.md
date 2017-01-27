@@ -31,6 +31,17 @@ int MatMul(float *A, float *B, float *C) {
 
 You can look at [Unibench](https://github.com/ompcloud/Unibench) repository if you want to see more examples.
 
+## Screencast Demo
+
+Here is a recorded video demonstrating cloud offloading from a simple laptop to a Spark cluster created on Amazon Web Service.
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" width="560" height="315"
+    src="https://www.youtube.com/embed/R5UhzOVrohU" frameborder="0"
+    allowfullscreen="">
+  </iframe>
+</div>
+
 ## Get Started
 
 The fastest way to start using OpenMP cloud offloading is to download and use our Docker image in a container.
