@@ -12,7 +12,7 @@ The version 4.0 of the OpenMP standard introduces new directives that enable the
 
 As an example, the code below presents a simple program loop describing a matrix multiplication which was annotated with OpenMP directives in order to offload the computation to the cloud. In the OpenMP abstract accelerator model, the *target* clause defines the portion of the program that will be executed by the target device. The *map* clause details the mapping of the data between the host and the target device:  inputs (A and B) are mapped *to* the target, and the output (C) is mapped *from* the target.
 
-```
+{% highlight C %}
 int MatMul(float *A, float *B, float *C) {
   // Offload code fragment for acceleration on the cloud cluster
   #pragma omp target device(CLOUD)
@@ -27,7 +27,7 @@ int MatMul(float *A, float *B, float *C) {
   // Resulted matrix 'C' is available locally
   return 0;
 }
-```
+{% endhighlight %}
 
 You can look at [Unibench](https://github.com/ompcloud/Unibench) repository if you want to see more examples.
 
@@ -47,22 +47,22 @@ Here is a recorded video demonstrating cloud offloading from a simple laptop to 
 The fastest way to start using OpenMP cloud offloading is to download and use our Docker image in a container.
 After installing [Docker](https://docs.docker.com/engine/installation/), you can download, run and access a container on your machine using:
 
-```
+{% highlight shell %}
 docker run --name ompcloud-test -d ompcloud/ompcloud-test:latest /sbin/my_init
 docker exec -i -t ompcloud-test /bin/bash
-```
+{% endhighlight %}
 
 Finally, our benchmark test can be executed by running the following scripts inside the container shell:
 
-```
+{% highlight shell %}
 $OMPCLOUD_CONF_DIR/ompcloud-quicktests.sh
-```
+{% endhighlight %}
 
 Our test are run locally within the container using Spark and HDFS servers that was already setup. To see the current configuration of our cloud offloading runtime, run the command:
 
-```
+{% highlight shell %}
 cat $OMPCLOUD_CONF_PATH
-```
+{% endhighlight %}
 
 In fact, the environment variable `$OMPCLOUD_CONF_PATH` defines the path of the configuration file to use when offloading the computation. This way, you can easily switch from one configuration to another by changing its value.
 
@@ -72,9 +72,9 @@ In fact, the environment variable `$OMPCLOUD_CONF_PATH` defines the path of the 
 
 Our toolset relies on custom versions of LLVM and Clang that are available [here](https://github.com/ompcloud). To use our cloud offloading workflow for your own program, you can compile your code by running something like:
 
-```
+{% highlight shell %}
 clang -fopenmp -omptargets=x86_64-unknown-linux-spark myapp.c
-```
+{% endhighlight %}
 
 ### Use an AWS cluster
 
@@ -84,12 +84,12 @@ If you want to run an application on AWS, you need to setup your cluster. The cl
 
 Our toolset is still very experimental, so it is probably a good idea to update it regularly. Update and recompilation within your container can be easily performed by running the following script:
 
-```
+{% highlight shell %}
 $OMPCLOUD_SCRIPT_DIR/ompcloud-updatetools.sh
-```
+{% endhighlight %}
 
 Another way is to update the docker image from the host using:
 
-```
+{% highlight shell %}
 docker pull ompcloud/ompcloud-test:latest
-```
+{% endhighlight %}
