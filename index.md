@@ -42,54 +42,6 @@ Here is a recorded video demonstrating cloud offloading from a simple laptop to 
   </iframe>
 </div>
 
-## Get Started
+## Documentation, Installation, Configuration
 
-The fastest way to start using OpenMP cloud offloading is to download and use our Docker image in a container.
-After installing [Docker](https://docs.docker.com/engine/installation/), you can download, run and access a container on your machine using:
-
-{% highlight shell %}
-docker run --name ompcloud-test -d ompcloud/ompcloud-test:latest /sbin/my_init
-docker exec -i -t ompcloud-test /bin/bash
-{% endhighlight %}
-
-Finally, our benchmark test can be executed by running the following scripts inside the container shell:
-
-{% highlight shell %}
-$OMPCLOUD_CONF_DIR/ompcloud-quicktests.sh
-{% endhighlight %}
-
-Our test are run locally within the container using Spark and HDFS servers that was already setup. To see the current configuration of our cloud offloading runtime, run the command:
-
-{% highlight shell %}
-cat $OMPCLOUD_CONF_PATH
-{% endhighlight %}
-
-In fact, the environment variable `$OMPCLOUD_CONF_PATH` defines the path of the configuration file to use when offloading the computation. This way, you can easily switch from one configuration to another by changing its value.
-
-## Advanced Usage
-
-### Compile your own application
-
-Our toolset relies on custom versions of LLVM and Clang that are available [here](https://github.com/ompcloud). To use our cloud offloading workflow for your own program, you can compile your code by running something like:
-
-{% highlight shell %}
-clang -fopenmp -omptargets=x86_64-unknown-linux-spark myapp.c
-{% endhighlight %}
-
-### Use an AWS cluster
-
-If you want to run an application on AWS, you need to setup your cluster. The cluster can be easily instantiate using [*cgcloud*](https://github.com/ompcloud/cgcloud), the  command is directly available in the container. Then you need to configure the credential to allow your application to offload computation to the cluster. You can find some examples of the configuration file [here](https://github.com/ompcloud/ompcloud-docker/tree/master/config-rtl-examples).
-
-### Update to last git version
-
-Our toolset is still very experimental, so it is probably a good idea to update it regularly. Update and recompilation within your container can be easily performed by running the following script:
-
-{% highlight shell %}
-$OMPCLOUD_SCRIPT_DIR/ompcloud-updatetools.sh
-{% endhighlight %}
-
-Another way is to update the docker image from the host using:
-
-{% highlight shell %}
-docker pull ompcloud/ompcloud-test:latest
-{% endhighlight %}
+All the information is provided [in the Wiki](https://github.com/ompcloud/ompcloud/wiki).
