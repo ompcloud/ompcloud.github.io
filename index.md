@@ -16,7 +16,7 @@ As an example, the code below presents a simple program loop describing a matrix
 int MatMul(float *A, float *B, float *C) {
   // Offload code fragment for acceleration on the cloud cluster
   #pragma omp target device(CLOUD)
-  #pragma omp map(to: A[:N*N], B[:N*N]) map(from: C[:N*N])
+  #pragma omp target map(to: A[:N*N], B[:N*N]) map(from: C[:N*N])
   // Execute loop iterations in parallel on the cluster
   #pragma omp parallel for
   for(int i=0; i < N; ++i)
