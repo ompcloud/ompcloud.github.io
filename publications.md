@@ -8,7 +8,7 @@ Publications (research papers, thesis) about or using OmpCloud are listed here.
 
 If you use or somehow benefit from OmpCloud in your research, please cite the following paper in your publication:
 
-  - Hervé Yviquel, Guido Araujo, "The Cloud as an OpenMP Offloading Device" in Proceeding of the 46th International Conference on Parallel Processing (ICPP-2017)
+  - Hervé Yviquel, Guido Araujo, "The Cloud as an OpenMP Offloading Device" in Proceeding of the 46th International Conference on Parallel Processing (ICPP-2017) [[pdf](https://hal.archives-ouvertes.fr/hal-01576973)]
 
 {% highlight TeX %}
 @inproceedings{Yviquel2017,
