@@ -15,9 +15,10 @@ People involved in the OmpCloud project are:
 
 ### More Information
 
-This work is supported by the Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP), under process 2014/25694-8.
+This work is supported by the Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP), under processes 2014/25694-8, 2017/21339-7, and 2018/21695-0, which takes place within the CEPID Center for Computational Engineering and Sciences ([CCES](http://cces.unicamp.br/)), process 2013/08293-7.
+
 The experiments are also supported by the __Microsoft Azure for Research program__ and the __AWS Cloud Credits for Research program__.
 
-### Contact me
+### Contact us
 
-[contact@ompcloud.org](mailto:contact@ompcloud.org)
+[herve.yviquel@ic.unicamp.br](mailto:herve.yviquel@ic.unicamp.br)
